@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+ #oo{
+    margin-top:100px;
+    text-align: justify;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Adjust the maximum width as needed */
+    
+ }
+ .jino{
+    color:#007bff;
+    text-transform: uppercase;
+    
+ }
+ #jerlin{
+    color:#007bff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+ }
+</style>
+<div class="container" id='oo'>
+    <!-- About Apollo Studio content -->
+    <h2 id='jerlin'>About Apollo Studio</h2>
+    <p>Welcome to Apollo Studio, your one-stop destination for creative photography and personalized artwork. Located near Thengaipattanam, we are passionate about capturing moments and turning them into cherished memories.</p>
+
+    <h3 class='jino'>Photography Services</h3>
+    <p>At Apollo Studio, we offer a wide range of photography services to suit your needs. Whether it's capturing the beauty of a wedding, the innocence of a newborn, or the essence of your special event, our experienced photographers have you covered. We specialize in:</p>
+    <ul>
+        <li>Wedding Photography</li>
+        <li>Portrait Photography</li>
+        <li>Event Photography</li>
+        <li>Product Photography</li>
+        <li>And More...</li>
+    </ul>
+
+    <h3 class='jino'>Artwork and Personalization</h3>
+    <p>But that's not all! Apollo Studio is not just about photography; we also bring your photos to life through our personalized artwork services. We can transform your favorite photos into:</p>
+    <ul>
+        <li>Custom Printed Cups</li>
+        <li>Personalized Pillows</li>
+        <li>Beautiful Photo Frames</li>
+        <li>And More...</li>
+    </ul>
+
+    <h3 class='jino'>Editing and Enhancement</h3>
+    <p>Our team of skilled editors is here to enhance your photos and make them truly exceptional. Whether you need basic touch-ups or creative editing, we've got the expertise to turn your photos into stunning works of art.</p>
+
+    <p>At Apollo Studio, we are committed to providing you with top-quality photography and personalized artwork that captures the essence of your special moments. Contact us today to discuss your photography needs and let us create memories that last a lifetime.</p>
+    <a href="{%url 'register' %}" class="btn btn-primary">Contact us</a>
+</div>
+{% endblock content %}

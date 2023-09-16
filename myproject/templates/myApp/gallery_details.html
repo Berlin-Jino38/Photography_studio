@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+#cc {
+    margin-top: 70px;
+}
+
+/* Set fixed dimensions for the card images */
+.card-img-top {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+}
+</style>
+<div class="container" id='cc'>
+    <div class="row">
+        {% for item in products %}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{ item.product_image.url }}" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

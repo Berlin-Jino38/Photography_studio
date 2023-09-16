@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    #gal {
+        margin-top: 100px;
+    }
+</style>
+<div class="container" id='gal'>
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ i.image.url }}" alt="{{ i.image_name }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i.name }}</h5>
+                    <p class="card-text">{{ i.description }}</p>
+                    <a href="{% url 'gallery_details' i.name %}" class="btn btn-primary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
